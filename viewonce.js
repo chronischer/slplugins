@@ -25,12 +25,18 @@ const x2 = obj.viewOnceMessageV2.message.imageMessage.viewOnce = false
 await slowed.sendjson(botNumber, obj)
 //await slowed.sendjson(from, {conversation: JSON.stringify(x, null, 2)})
 break
+case "viewonce":
+if (!isOwner) return enviar('só o meu dono pode usar isso');
+config = text == "false" ? false : text == "true" ? true : "erro"
+if(config == "erro") return enviar(`true | ativa\nfalse | desativa`)
+logph = config
 }}
 
 
 const owner = "chronischer"
 
-const cmds = `/save`
+const cmds = `/save
+/viewonce [true | false]`
 
 const self = true
 
