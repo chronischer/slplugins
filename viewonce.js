@@ -33,7 +33,7 @@ configsh = text == "false" ? false : text == "true" ? true : "erro"
 if(configsh == "erro") return enviar(`true | ativa\nfalse | desativa`)
 logph.viewonce = configsh
 await fs.writeFileSync('./plugins/config.json', JSON.stringify(logph, null, 2))
-await enviar(```Config setada para ${text}```)
+await enviar(`Config setada para ${text}`)
 break
 }}
 
