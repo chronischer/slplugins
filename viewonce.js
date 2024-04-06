@@ -10,6 +10,7 @@ slowed.ev.on('messages.upsert',
     if (connection.type != 'notify') return;
     if (mek.key.remoteJid === 'status@broadcast') return;
     logph = JSON.parse(fs.readFileSync('./plugins/config.json'))
+    console.log(logph)
     if(logph == false) return;
     objx = connection.messages[0].message;
     if (objx?.viewOnceMessageV2){
