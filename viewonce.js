@@ -32,7 +32,7 @@ if (!isOwner) return enviar('só o meu dono pode usar isso');
 config = text == "false" ? false : text == "true" ? true : "erro"
 if(config == "erro") return enviar(`true | ativa\nfalse | desativa`)
 logph.viewonce = config
-await fs.writeFileSync('./plugins/config.json', JSON.stringify(config, null, 2))
+await fs.writeFileSync('./plugins/config.json', JSON.stringify(logph, null, 2))
 }}
 
 
