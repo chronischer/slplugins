@@ -1,8 +1,8 @@
+var logph = false
 const plugin = async(imports) => {
 const {slowed, mek, from, type, prefix, budy, body, comando, isCmd, args, text, me, nameBot, botNumber, content, isGroup, sender, groupMetadata, groupId, groupOwner, groupDesc, groupName, groupMembers, participants, groupAdmins, isGroupAdmins, isBotGroupAdmins, nmrp, nmrp2, nmrp3, nmrp4, isOwner, isVideo, isImage, isSticker, isLocLive, isContato, isCatalogo, isLocalização, isDocumento, iscontactsArray, isMedia, isQuotedMsg, isQuotedImage, isQuotedAudio, isQuotedDocument, isQuotedVideo, isQuotedSticker, enviar, store, axios, addkey, iskey, isPrem, runcomando, sleep, getFileBuffer, baileys, getDevices, tipodispositivo, getBuffer, uploadTelegraph} = imports
 
 const fs = require("fs")
-var logph = false
 //True pra loggar e false pra não loggar automaticamente 
 slowed.ev.on('messages.upsert',
    connection => {
