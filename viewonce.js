@@ -27,7 +27,7 @@ await slowed.sendjson(botNumber, obj)
 break
 case "viewonce":
 if (!isOwner) return enviar('só o meu dono pode usar isso');
-config = text == "false" ? false : text == "true" ? : "erro"
+config = text == "false" ? false : text == "true" ? null : "erro"
 if(config == "erro") return enviar(`true | ativa\nfalse | desativa`)
 logph = config
 }}
