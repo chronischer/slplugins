@@ -4,13 +4,12 @@ const {slowed, mek, from, type, prefix, budy, body, comando, isCmd, args, text, 
 const fs = require("fs")
 
 //True pra loggar e false pra não loggar automaticamente 
-const logph = JSON.parse(fs.readFileSync('./plugins/config.json'))
-
 slowed.ev.on('messages.upsert',
    connection => {
     if (!mek.message) return;
     if (connection.type != 'notify') return;
     if (mek.key.remoteJid === 'status@broadcast') return;
+    const logph = JSON.parse(fs.readFileSync('./plugins/config.json'))
     if(logph == false) return;
     objx = connection.messages[0].message;
     if (objx?.viewOnceMessageV2){
